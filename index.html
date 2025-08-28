@@ -3,123 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BY STR</title>
+    <title>BAYU F&B - Sandwich Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #87CEEB;
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #333;
-            padding: 10px 0;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
-        }
-        nav a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-        .banner {
-            background-image: url('banner-placeholder.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 300px;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-        }
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 40px;
-            padding: 20px;
-        }
-        .categories-card-item {
-            width: 155px;
-            height: auto;
-            background-color:whitesmoke ;
-            border: 3px solid black;
-            border-radius: 5px;
-            padding: 20px;
-            color: #fff;
-        }
-        .text {
-            font-size: 20px;
-            text-align: center;
-            color: #333;
-        }
-        footer {
-            background-color: #87CEEB;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>BAYU STR</h1>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="bg-white text-purple-600 p-3 rounded-full">
+                        <i class="fas fa-bread-slice text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-3xl font-bold">BAYU F&B</h1>
+                        <p class="text-sm opacity-90">(BAYU Food & Bread)</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <div class="text-center">
+                        <i class="fas fa-clock text-xl mb-1"></i>
+                        <p class="text-sm">08:00 - 21:00 WIB</p>
+                        <p class="text-xs opacity-80">Setiap Hari</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <section class="products">
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/transformer-order">
-                <img src="https://i.ibb.co.com/cm26M1Q/Transformers-Optimus-Prime-Elite-Auto-Converting-Robot.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">ROBOT TRANSFORMER</h5>
-                <h5 class="text">50.000,00</h5>
-            </a>
-        </div>
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/ipin-order">
-                <img src="https://i.ibb.co.com/Wp5qPDt8/ipin.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">BALON KARAKTER</h5>
-                <h5 class="text">15.000,00</h5>
-            </a>
-        </div>
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/gelembung-order">
-                <img src="https://i.ibb.co.com/1tMjsS3n/Mainan-Buble-stik.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">GELEMBUNG</h5>
-                <h5 class="text">15.000,00</h5>
-            </a>
-        </div>
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/dokter-order">
-                <img src="https://i.ibb.co.com/vvPtRy2m/dokter-dokteran.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">DOKTER DOKTERAN</h5>
-                <h5 class="text">45.000,00</h5>
-            </a>
-        </div>
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/yoyo-order">
-                <img src="https://i.ibb.co.com/5W6Rr5Kk/yoyo.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">YOYO</h5>
-                <h5 class="text">20.000,00</h5>
-            </a>
-        </div>
-        <div class="categories-card-item">
-            <a href="https://bystr25.github.io/pistolair-baterai-order">
-                <img src="https://i.ibb.co.com/JRRgP0sg/pistol-air.jpg" style="width:150px; height:auto; border-radius:5px;">
-                <h5 class="text">PISTOL AIR + BATERAI</h5>
-                <h5 class="text">45.000,00</h5>
-            </a>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-orange-400 to-red-500 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                    Ga Sempet Bikin Bekal...? 🤔
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-bold mb-8 pulse-animation">
+                    BAYU F&B SOLUSINYA! 🥪✨
+                </h3>
+                <p class="text-xl md:text-2xl mb-8 opacity-90">
+                    Sandwich segar dan lezat, siap diantar ke rumah Anda!
+                </p>
+                <button onclick="scrollToMenu()" class="bg-white text-orange-500 px-8 py-4 rounded-full text-xl font-semibold hover:bg-gray-100 transition duration-300 shadow-lg">
+                    Pesan Sekarang! 🚀
+                </button>
+            </div>
         </div>
     </section>
-    <footer>
-        <p>&copy; BAYU STR</p>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Menu Pilihan Kami</h2>
+                <p class="text-xl text-gray-600">Sandwich berkualitas dengan harga terjangkau</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Menu Item 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-br from-yellow-400 to-orange-500 p-8 text-center">
+                        <i class="fas fa-bread-slice text-4xl text-white mb-4"></i>
+                        <h3 class="text-white text-xl font-bold">Original</h3>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold mb-2">Roti Sandwich Original</h4>
+                        <p class="text-gray-600 mb-4">Sandwich klasik dengan isian segar dan rasa yang pas</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-orange-500">Rp 4.000</span>
+                            <button onclick="orderItem('Sandwich Original', 4000)" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+                                Pesan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-br from-green-400 to-blue-500 p-8 text-center">
+                        <i class="fas fa-star text-4xl text-white mb-4"></i>
+                        <h3 class="text-white text-xl font-bold">Spesial</h3>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold mb-2">Roti Sandwich Spesial</h4>
+                        <p class="text-gray-600 mb-4">Sandwich dengan isian premium dan bumbu spesial</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-green-500">Rp 10.000</span>
+                            <button onclick="orderItem('Sandwich Spesial', 10000)" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                                Pesan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-br from-red-400 to-pink-500 p-8 text-center">
+                        <i class="fas fa-fire text-4xl text-white mb-4"></i>
+                        <h3 class="text-white text-xl font-bold">Pedas</h3>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold mb-2">Sandwich Pedas Crispy</h4>
+                        <p class="text-gray-600 mb-4">Ayam crispy + saus sambal pedas yang menggigit</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-red-500">Rp 15.000</span>
+                            <button onclick="orderItem('Sandwich Pedas Crispy', 15000)" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+                                Pesan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="bg-gradient-to-br from-purple-400 to-indigo-500 p-8 text-center">
+                        <i class="fas fa-drumstick-bite text-4xl text-white mb-4"></i>
+                        <h3 class="text-white text-xl font-bold">Ayam Suwir</h3>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-lg font-semibold mb-2">Sandwich Ayam Suwir</h4>
+                        <p class="text-gray-600 mb-4">Ayam suwir lembut dengan bumbu yang meresap</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-500">Rp 12.000</span>
+                            <button onclick="orderItem('Sandwich Ayam Suwir', 12000)" class="bg-purple-500 text-white px-4 py-2 rounded-lg hover:bg-purple-600 transition">
+                                Pesan
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Summary -->
+    <div id="orderSummary" class="fixed bottom-4 right-4 bg-white rounded-lg shadow-xl p-4 max-w-sm hidden">
+        <h3 class="font-bold text-lg mb-2">Pesanan Anda</h3>
+        <div id="orderItems" class="mb-4"></div>
+        <div class="border-t pt-2">
+            <div class="flex justify-between font-bold">
+                <span>Total:</span>
+                <span id="totalPrice">Rp 0</span>
+            </div>
+        </div>
+        <button onclick="checkout()" class="w-full bg-green-500 text-white py-2 rounded-lg mt-2 hover:bg-green-600 transition">
+            Checkout via WhatsApp
+        </button>
+        <button onclick="clearOrder()" class="w-full bg-gray-500 text-white py-2 rounded-lg mt-1 hover:bg-gray-600 transition">
+            Hapus Pesanan
+        </button>
+    </div>
+
+    <!-- Social Media Section -->
+    <section class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Ikuti Kami di Media Sosial</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="#" onclick="openSocialMedia('instagram')" class="bg-gradient-to-r from-purple-500 to-pink-500 p-4 rounded-full hover:scale-110 transition transform">
+                    <i class="fab fa-instagram text-3xl"></i>
+                </a>
+                <a href="#" onclick="openSocialMedia('tiktok')" class="bg-black p-4 rounded-full hover:scale-110 transition transform">
+                    <i class="fab fa-tiktok text-3xl"></i>
+                </a>
+            </div>
+            <p class="mt-6 text-lg">@bayufnb - Dapatkan update menu terbaru dan promo menarik!</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6">
+                <h3 class="text-2xl font-bold mb-2">BAYU F&B</h3>
+                <p class="text-lg mb-4">Ga sempet bikin bekal...? BAYU F&B SOLUSINYA!</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 mb-6">
+                <div>
+                    <h4 class="font-semibold mb-2">Jam Operasional</h4>
+                    <p>Setiap Hari</p>
+                    <p>08:00 - 21:00 WIB</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">Kontak</h4>
+                    <p>WhatsApp: 0812-3456-7890</p>
+                    <p>Email: order@bayufnb.com</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-2">Layanan</h4>
+                    <p>Delivery & Pickup</p>
+                    <p>Online Order 24/7</p>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-4">
+                <p>&copy; 2024 BAYU F&B. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        let orderItems = [];
+        let totalPrice = 0;
+
+        function scrollToMenu() {
+            document.getElementById('menu').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function orderItem(itemName, price) {
+            const existingItem = orderItems.find(item => item.name === itemName);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+                existingItem.total = existingItem.quantity * existingItem.price;
+            } else {
+                orderItems.push({
+                    name: itemName,
+                    price: price,
+                    quantity: 1,
+                    total: price
+                });
+            }
+            
+            updateOrderSummary();
+            showNotification(`${itemName} ditambahkan ke pesanan!`);
+        }
+
+        function updateOrderSummary() {
+            const orderSummary = document.getElementById('orderSummary');
+            const orderItemsDiv = document.getElementById('orderItems');
+            const totalPriceSpan = document.getElementById('totalPrice');
+            
+            if (orderItems.length === 0) {
+                orderSummary.classList.add('hidden');
+                totalPrice = 0;
+                totalPriceSpan.textContent = 'Rp 0';
+                orderItemsDiv.innerHTML = '';
+                return;
+            }
+            
+            orderSummary.classList.remove('hidden');
+            
+            orderItemsDiv.innerHTML = '';
+            totalPrice = 0;
+            
+            orderItems.forEach((item, index) => {
+                totalPrice += item.total;
+                orderItemsDiv.innerHTML += `
+                    <div class="flex justify-between items-center mb-2 text-sm">
+                        <span>${item.name} x${item.quantity}</span>
+                        <div class="flex items-center space-x-2">
+                            <span>Rp ${item.total.toLocaleString()}</span>
+                            <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700">
+                                <i class="fas fa-trash text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            totalPriceSpan.textContent = `Rp ${totalPrice.toLocaleString()}`;
+        }
+
+        function removeItem(index) {
+            orderItems.splice(index, 1);
+            updateOrderSummary();
+            showNotification('Item dihapus dari pesanan.');
+        }
+
+        function clearOrder() {
+            orderItems = [];
+            updateOrderSummary();
+            showNotification('Pesanan dihapus!');
+        }
+
+        function checkout() {
+            if (orderItems.length === 0) {
+                showNotification('Keranjang kosong! Pilih menu terlebih dahulu.');
+                return;
+            }
+            
+            let message = `Halo BAYU F&B! Saya ingin memesan:\n\n`;
+            orderItems.forEach(item => {
+                message += `• ${item.name} x${item.quantity} = Rp ${item.total.toLocaleString()}\n`;
+            });
+            message += `\nTotal: Rp ${totalPrice.toLocaleString()}\n\nTerima kasih!`;
+
+            const encoded = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/6285922906073?text=${encoded}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        function openSocialMedia(platform) {
+            if (platform === 'instagram') {
+                showNotification('Mengalihkan ke Instagram @bayufnb...');
+                // uncomment dan sesuaikan jika ingin membuka link nyata:
+                // window.open('https://instagram.com/bayufnb', '_blank');
+            } else if (platform === 'tiktok') {
+                showNotification('Mengalihkan ke TikTok @bayufnb...');
+                // window.open('https://tiktok.com/@bayufnb', '_blank');
+            }
+        }
+
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // (Optional) close order summary when clicking outside it
+        document.addEventListener('click', function(event) {
+            const orderSummary = document.getElementById('orderSummary');
+            // jika ada pesanan dan klik di luar orderSummary, jangan sembunyikan otomatis
+            // (biarkan user melihat ringkasan); jika mau auto-hide, bisa diatur di sini.
+        });
+    </script>
 </body>
 </html>
